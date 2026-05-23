@@ -1,0 +1,11 @@
+NAME
+    simple_shell - A custom shell implementation
+
+SYNOPSIS
+    ./hsh
+
+DESCRIPTION
+    A simple shell covering tasks 0 to 20.
+    
+AUTHOR
+    Abeer Alsaiari
