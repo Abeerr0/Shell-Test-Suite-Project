@@ -1,59 +1,33 @@
-# Simple Shell
+# Simple Shell Test Suite
 
 ## Description
-This project is a simple UNIX command language interpreter. It reads commands from either a file or standard input and executes them. It replicates basic functionalities of the `sh` shell, demonstrating a deep understanding of processes, system calls, and program execution. This project is a core part of the Holberton School curriculum.
+This project is an automated test suite designed to validate the Simple Shell UNIX command language interpreter. It ensures the shell meets all requirements from Task 0 to Task 20, covering both regular operations and edge cases.
 
 ## Features
-* Displays a prompt and waits for user input.
-* Executes standard commands (e.g., `/bin/ls`).
-* Handles commands with arguments (e.g., `ls -l`).
-* Implements `PATH` resolution (e.g., `ls` works without the full path).
-* Handles the End-Of-File (EOF) condition (`Ctrl+D`).
-* Handles the `SIGINT` signal (`Ctrl+C`) without terminating the shell.
-* Supports both interactive and non-interactive modes.
-* Returns proper exit status codes (e.g., `127` when a command is not found).
-* Built-in commands:
-  * `exit`: Exits the shell smoothly, with optional exit status.
-  * `env`: Prints the current environment variables.
-  * `setenv VARIABLE VALUE`: Sets a new environment variable or updates an existing one.
-  * `unsetenv VARIABLE`: Removes an environment variable.
+* **Automated Execution:** Run all test cases instantly using a single script.
+* **Modular Design:** Individual test scripts for each task.
+* **Broad Coverage:** Tests regular commands, arguments, PATH resolution, and built-ins.
+* **Edge Case Validation:** Handles inputs like EOF (Ctrl+D) and non-existent commands.
 
 ## Requirements
-* Allowed editors: `vi`, `vim`, `emacs`
-* All files will be compiled on Ubuntu 20.04 LTS
-* Code must follow the Betty style and will be checked using `betty-style.pl` and `betty-doc.pl`
-* No memory leaks are allowed
-* All header files should be include guarded
+* All files will be executed on Ubuntu 20.04 LTS.
+* The shell executable must be named hsh.
+* Contributions must follow the Betty style.
 
 ## Compilation and Installation
-To compile the shell, clone this repository and run the following command:
-\`\`\`bash
-gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
-\`\`\`
+To run the test suite, clone this repository and execute the following commands:
+chmod +x run_tests.sh
+./run_tests.sh
 
 ## Examples
 
 ### Interactive Mode
-\`\`\`bash
-$ ./hsh
-($) ls
-AUTHORS  man_1_simple_shell  README.md  shell.h  main.c
-($) env
-USER=ubuntu
-LANGUAGE=en_US
-PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-($) exit
-$
-\`\`\`
-
-### Non-Interactive Mode
-\`\`\`bash
-$ echo "ls" | ./hsh
-AUTHORS  man_1_simple_shell  README.md  shell.h  main.c
-$
-\`\`\`
+$ ./run_tests.sh
+Testing Task 0 (Files)...
+[PASS] README.md exists.
+[PASS] AUTHORS exists.
 
 ## Authors
-* Abeer Alsayari
-* Ahaad
-* Reem
+* Abeer Alsaiari - Tasks 0-5, 19
+* Ahaad - Tasks 6-12
+* Reem - Tasks 14-18
